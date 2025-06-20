@@ -11,64 +11,60 @@ import lineBreak from "../public/lineBreak.svg";
 
 function Skills() {
   return (
-    <section
-      className="bg-primaryBlue flex-col justify-between relative"
-      id="skills"
-    >
-      <div className="flex items-start">
-        <Image src={lineBreak} alt="lineBreak Image" width={450} height={3} />
+    <section className="bg-primaryBlue relative flex flex-col" id="skills">
+      {/* Decorative Line and Floating YouTube Icon */}
+      <div className="flex sm:-mt-28 lg:mt-28 relative">
+        <div className="absolute flex sm:items-center lg:items-start sm:w-[200px] sm:h-[20px] lg:w-[40rem] lg:h-[2rem] lg:-left-24 ">
+          <Image src={lineBreak} alt="Line Break" fill />
+        </div>
+
+        <div className="hidden xl:block absolute lg:top-7 lg:left-[28%] lg:w-[80px] lg:h-[80px]">
+          <Image src={youtube} alt="YouTube" fill />
+        </div>
       </div>
 
-      <Image
-        alt="youtube"
-        className="hidden md:block top-[200px] right-[50px] lg:top-7 lg:left-[28%] absolute"
-        src={youtube}
-      />
+      {/* Main Content */}
+      <div className="mt-9 m lg:mt-16 mx-6 flex flex-col lg:flex-row justify-between gap-16 md:gap-20 xl:gap-40 relative">
+        {/* Title and Floating Icons */}
+        <div className="relative text-white text-3xl font-bold font-oswald md:max-w-lg mb-10 md:mb-0">
+          <h2>
+            I got the experience.
+            <br />
+            Here is my toolbelt for success.
+          </h2>
 
-      <div className="mt-11 mx-20 flex justify-between gap-40">
-        <h2 className="text-white relative text-3xl w-full md:text-left font-bold md:max-w-lg mb-10 md:mr-10 md:mb-0 md:w-max mr-0 font-oswald ">
-          I got the experience.
-          <br />
-          Here is my toolbelt for success.
+          {/* Floating Icons */}
           <Image
-            alt="fillStar"
-            className="hidden md:block absolute top-28 right-[-15px]"
             src={fillStar}
+            alt="Star"
+            className="hidden xl:block absolute top-28 -right-4"
           />
-          <Image
-            alt="laptop"
-            className="hidden lg:block absolute lg:bottom-40 lg:-left-14"
-            src={laptop}
-          />
-          <Image
-            alt="coding"
-            className="hidden md:block absolute top-[140px] left-20 lg:top-[130px]"
-            src={coding}
-          />
-        </h2>
+          <div className="w-24 h-24 -bottom-20 right-7 md:w-24 md:h-24 md:bottom-0 md:right-0 block absolute lg:w-[88px] lg:h-[88px] lg:bottom-40 lg:left-2 xl:w-[150px] xl:h-[150px] xl:bottom-20 xl:left-12">
+            <Image src={laptop} alt="Laptop" fill />
+          </div>
+          <div className="w-14 h-14 -bottom-8 -right-2 md:w-20 md:h-20 md:bottom-8 md:-right-16 block absolute lg:w-[80px] lg:h-[80px] lg:top-[160px] lg:left-20 xl:w-[100px] xl:h-[100px] xl:top-40 xl:left-40">
+            <Image src={coding} alt="Coding" fill />
+          </div>
+        </div>
 
-        {/* Skills Icons */}
-        <div className="relative max-w-lg w-full mx-auto md:mx-none grid gap-x-8 gap-y-12 sm:gap-8 md:gap-12 grid-cols-3 sm:grid-cols-6 items-center place-content-center">
-          {skills.map((item, index) => {
-            return (
-              <div
-                title={item.title}
-                key={index}
-                className="w-10 mx-auto flex items-center flex-col justify-center"
-              >
-                <Image
-                  width={50}
-                  height={50}
-                  alt={item.title}
-                  src={item.icon}
-                  style={item.style}
-                />
-                <p className="text-xs text-fun-gray font-bold mt-3 text-white">
-                  {item.title}
-                </p>
-              </div>
-            );
-          })}
+        {/* Skills Grid */}
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-x-8 gap-y-12 sm:gap-8 md:gap-12 w-full max-w-lg mx-auto lg:mx-0 place-content-center items-center">
+          {skills.map((item, index) => (
+            <div
+              key={index}
+              title={item.title}
+              className="flex flex-col items-center justify-center w-10 mx-auto"
+            >
+              <Image
+                src={item.icon}
+                alt={item.title}
+                width={50}
+                height={50}
+                style={item.style}
+              />
+              <p className="mt-3 text-xs font-bold text-white">{item.title}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

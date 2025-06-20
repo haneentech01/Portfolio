@@ -7,17 +7,17 @@ import circle from "../assets/download (10).png";
 
 const Hero = () => {
   return (
-    <section className="bg-primaryBlue h-screen">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-36 px-4 pb-10 md:grid-cols-2 lg:p-4 text-white">
-        <div className="flex min-h-48 flex-col justify-between lg:min-h-56 lg:max-w-[33.75rem] font-inter">
+    <section className="bg-primaryBlue">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center lg:gap-10 gap-36 px-4 pb-10 lg:grid-cols-2 lg:p-4 text-white">
+        <div className="flex min-h-48 flex-col justify-between xl:min-h-56 xl:max-w-[33.75rem] font-inter sm:items-center lg:items-start sm:mx-5 md:mx-10 lg:mx-5 xl:mx-0">
           {/* About */}
-          <h1 className="leading-8 lg:leading-[50px] mt-2 mb-2 block text-lg lg:text-2xl ">
+          <h1 className="leading-8 lg:leading-[50px] xl:leading-[40px] mt-9 md:mt-12 lg:mt-16 mb-2 block text-xl md:text-3xl xl:text-2xl ">
             Hey, I&apos;m{" "}
-            <span className="font-bold font-oswald text-xl lg:text-3xl text-[#9cceff]">
+            <span className="font-bold font-oswald text-2xl md:text-4xl xl:text-3xl text-[#9cceff]">
               Haneen {""}
             </span>
             .I&apos;m a{" "}
-            <span className="block text-3xl lg:text-5xl font-bold font-oswald text-primaryYallow leading-[60px] lg:leading-[80px]">
+            <span className="block text-3xl md:text-4xl xl:text-5xl font-bold font-oswald text-primaryYallow leading-[60px] md:leading-[70px] lg:leading-[80px] xl:leading-[80px]">
               <TypewriterText />
             </span>
             , I develop fast, responsive, and user-friendly websites, offering
@@ -29,7 +29,7 @@ const Hero = () => {
             <a
               href="#contact"
               aria-label="Connect with me"
-              className="bg-blueLight border-dashed border-2 border-sky-500 min-w-32 cursor-pointer rounded-lg px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E] hover:bg-hoverBlueLight"
+              className="bg-blueLight border-dashed border-2 border-sky-500 min-w-32 cursor-pointer rounded-xl px-[14px] py-[10px] text-center text-sm font-medium text-[#00071E] hover:bg-hoverBlueLight"
             >
               Hire Me
             </a>
@@ -37,14 +37,15 @@ const Hero = () => {
               href="https://github.com/haneentech01"
               target="_blank"
               aria-label="View GitHub Profile"
-              className="border-dashed border-2 border-sky-500 cursor-pointer rounded-lg px-[14px] py-[10px] text-sm hover:bg-hoverPrimaryBlue "
+              className="border-dashed border-2 border-sky-500 cursor-pointer rounded-xl px-[14px] py-[10px] text-sm hover:bg-hoverPrimaryBlue "
             >
               GitHub Profile
             </a>
           </div>
         </div>
 
-        <div className="flex mt-10 max-w-[1200px] ">
+        {/* Images */}
+        <div className="hideen lg:flex max-w-[1200px] relative  ">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -54,18 +55,20 @@ const Hero = () => {
               ease: [0, 0.71, 0.2, 1.01],
             }}
           >
-            <div className="relative w-[500px] h-[500px] mx-auto ">
+            {/* Hero Image */}
+            <div className="hidden lg:block relative lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] xl:mx-auto ">
               <Image src={circle} alt="Circle Image" fill />
 
               <Image
                 src="/logo.png"
                 alt="Hero Image"
                 fill
-                className="object-contain p-7 right-0"
+                className="object-contain lg:p-5 p-7 xl:right-0"
               />
             </div>
           </motion.div>
 
+          {/* HTML Icon */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -74,16 +77,12 @@ const Hero = () => {
               delay: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="block bottom-52 right-2 absolute"
+            className="hidden lg:block absolute  xl:-right-8 xl:w-[70px] xl:h-[70px] lg:bottom-40 lg:-right-2 lg:w-11 lg:h-11"
           >
-            <Image
-              src="/hero/html.svg"
-              alt="HTML Image"
-              width={70}
-              height={70}
-            />
+            <Image src="/hero/html.svg" alt="HTML Image" fill />
           </motion.div>
 
+          {/* Code Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -92,16 +91,12 @@ const Hero = () => {
               delay: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="block top-32 right-10 absolute"
+            className="hidden lg:block xl:top-12 xl:right-10 absolute lg:right-11 lg:top-9 lg:w-11 lg:h-11 xl:w-[80px] xl:h-[80px] "
           >
-            <Image
-              src="/hero/code.svg"
-              alt="Code Image"
-              width={80}
-              height={80}
-            />
+            <Image src="/hero/code.svg" alt="Code Image" fill />
           </motion.div>
 
+          {/* JS Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -110,11 +105,12 @@ const Hero = () => {
               delay: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="block top-[6.5rem] ms-32 absolute"
+            className="hidden lg:block xl:-top-4 xl:ms-32 xl:w-[66px] xl:h-[66px] absolute lg:w-16 lg:h-16 lg:-top-12 lg:ms-32"
           >
-            <Image src="/hero/js.svg" alt="JS Image" width={75} height={75} />
+            <Image src="/hero/js.svg" alt="JS Image" fill />
           </motion.div>
 
+          {/* Coder Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -123,16 +119,12 @@ const Hero = () => {
               delay: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="block bottom-12 -ms-32 absolute"
+            className="hidden lg:block absolute xl:bottom-10 xl:-ms-32 xl:w-[160px] xl:h-[160px] lg:w-28 lg:h-28 lg:bottom-5 lg:-ms-12"
           >
-            <Image
-              src="/hero/coder.svg"
-              alt="Coder Image"
-              width={160}
-              height={160}
-            />
+            <Image src="/hero/coder.svg" alt="Coder Image" fill />
           </motion.div>
 
+          {/* Next Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -141,7 +133,7 @@ const Hero = () => {
               delay: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="block top-40 -ms-32 absolute"
+            className="hidden lg:block xl:top-20 xl:-ms-28 xl:w-[80px] xl:h-[80px] absolute lg:w-12 lg:h-12 lg:top-20 lg:-ms-14"
           >
             <Image
               src="/hero/nextjs.svg"
@@ -151,6 +143,7 @@ const Hero = () => {
             />
           </motion.div>
 
+          {/* Dino Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -159,16 +152,12 @@ const Hero = () => {
               delay: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="block -bottom-24 ms-36 absolute"
+            className="hidden lg:block xl:-bottom-16 xl:ms-36 xl:w-[80px] xl:h-[80px] absolute lg:w-20 lg:h-20 lg:-bottom-16 lg:ms-40 z-10"
           >
-            <Image
-              src="/hero/dino.svg"
-              alt="Dino Image"
-              width={80}
-              height={80}
-            />
+            <Image src="/hero/dino.svg" alt="Dino Image" fill />
           </motion.div>
 
+          {/* Star Image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -177,14 +166,9 @@ const Hero = () => {
               delay: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className="block -bottom-[4.5rem] right-24 absolute"
+            className="hidden lg:block xl:-bottom-5 xl:right-10 xl:w-[80px] xl:h-[80px] absolute lg:w-16 h-16 lg:-bottom-5 lg:right-5 z-10"
           >
-            <Image
-              src="/hero/pop1.svg"
-              alt="star Image"
-              width={70}
-              height={70}
-            />
+            <Image src="/hero/pop1.svg" alt="star Image" fill />
           </motion.div>
         </div>
       </div>
