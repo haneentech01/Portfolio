@@ -3,7 +3,13 @@ import Image from "next/image";
 import React from "react";
 import TypewriterText from "./TypewriterText";
 import { motion } from "framer-motion";
-import circle from "../assets/download (10).png";
+import code from "../assets/hero/code.svg";
+import coder from "../assets/hero/coder.svg";
+import dino from "../assets/hero/dino.svg";
+import html from "../assets/hero/html.svg";
+import js from "../assets/hero/js.svg";
+import nextjs from "../assets/hero/nextjs.svg";
+import star from "../assets/hero/pop1.svg";
 
 const Hero = () => {
   return (
@@ -57,7 +63,7 @@ const Hero = () => {
           >
             {/* Hero Image */}
             <div className="hidden lg:block relative lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] xl:mx-auto ">
-              <Image src={circle} alt="Circle Image" fill />
+              <Image src="/circle.png" alt="Circle Image" fill />
 
               <Image
                 src="/logo.png"
@@ -79,7 +85,7 @@ const Hero = () => {
             }}
             className="hidden lg:block absolute  xl:-right-8 xl:w-[70px] xl:h-[70px] lg:bottom-40 lg:-right-2 lg:w-11 lg:h-11"
           >
-            <Image src="/hero/html.svg" alt="HTML Image" fill />
+            <Image src={html} alt="HTML Image" fill />
           </motion.div>
 
           {/* Code Image */}
@@ -93,7 +99,7 @@ const Hero = () => {
             }}
             className="hidden lg:block xl:top-12 xl:right-10 absolute lg:right-11 lg:top-9 lg:w-11 lg:h-11 xl:w-[80px] xl:h-[80px] "
           >
-            <Image src="/hero/code.svg" alt="Code Image" fill />
+            <Image src={code} alt="Code Image" fill />
           </motion.div>
 
           {/* JS Image */}
@@ -107,7 +113,7 @@ const Hero = () => {
             }}
             className="hidden lg:block xl:-top-4 xl:ms-32 xl:w-[66px] xl:h-[66px] absolute lg:w-16 lg:h-16 lg:-top-12 lg:ms-32"
           >
-            <Image src="/hero/js.svg" alt="JS Image" fill />
+            <Image src={js} alt="JS Image" fill />
           </motion.div>
 
           {/* Coder Image */}
@@ -121,7 +127,7 @@ const Hero = () => {
             }}
             className="hidden lg:block absolute xl:bottom-10 xl:-ms-32 xl:w-[160px] xl:h-[160px] lg:w-28 lg:h-28 lg:bottom-5 lg:-ms-12"
           >
-            <Image src="/hero/coder.svg" alt="Coder Image" fill />
+            <Image src={coder} alt="Coder Image" fill />
           </motion.div>
 
           {/* Next Image */}
@@ -135,12 +141,7 @@ const Hero = () => {
             }}
             className="hidden lg:block xl:top-20 xl:-ms-28 xl:w-[80px] xl:h-[80px] absolute lg:w-12 lg:h-12 lg:top-20 lg:-ms-14"
           >
-            <Image
-              src="/hero/nextjs.svg"
-              alt="Next Image"
-              width={80}
-              height={80}
-            />
+            <Image src={nextjs} alt="Next Image" width={80} height={80} />
           </motion.div>
 
           {/* Dino Image */}
@@ -154,7 +155,7 @@ const Hero = () => {
             }}
             className="hidden lg:block xl:-bottom-16 xl:ms-36 xl:w-[80px] xl:h-[80px] absolute lg:w-20 lg:h-20 lg:-bottom-16 lg:ms-40 z-10"
           >
-            <Image src="/hero/dino.svg" alt="Dino Image" fill />
+            <Image src={dino} alt="Dino Image" fill />
           </motion.div>
 
           {/* Star Image */}
@@ -168,7 +169,7 @@ const Hero = () => {
             }}
             className="hidden lg:block xl:-bottom-5 xl:right-10 xl:w-[80px] xl:h-[80px] absolute lg:w-16 h-16 lg:-bottom-5 lg:right-5 z-10"
           >
-            <Image src="/hero/pop1.svg" alt="star Image" fill />
+            <Image src={star} alt="star Image" fill />
           </motion.div>
         </div>
       </div>

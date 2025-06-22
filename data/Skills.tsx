@@ -44,6 +44,11 @@ export const skills: Skill[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
   {
+    title: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/github/github-original.svg",
+    style: { filter: "invert(1)" },
+  },
+  {
     title: "Figma",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   },

@@ -3,19 +3,18 @@
 import Image from "next/image";
 import React from "react";
 import { skills } from "@/data/Skills";
-import coding from "../public/skills/coding.svg";
-import fillStar from "../public/skills/fillStar.svg";
-import laptop from "../public/skills/laptop.svg";
-import youtube from "../public/skills/youtube.svg";
-import lineBreak from "../public/lineBreak.svg";
+import coding from "../assets/skills/coding.svg";
+import fillStar from "../assets/skills/fillStar.svg";
+import laptop from "../assets/skills/laptop.svg";
+import youtube from "../assets/skills/youtube.svg";
 
 function Skills() {
   return (
     <section className="bg-primaryBlue relative flex flex-col" id="skills">
       {/* Decorative Line and Floating YouTube Icon */}
-      <div className="flex sm:-mt-28 lg:mt-28 relative">
+      <div className="flex mt-20 lg:mt-40 relative">
         <div className="absolute flex sm:items-center lg:items-start sm:w-[200px] sm:h-[20px] lg:w-[40rem] lg:h-[2rem] lg:-left-24 ">
-          <Image src={lineBreak} alt="Line Break" fill />
+          <Image src="/lineBreak.svg" alt="Line Break" fill />
         </div>
 
         <div className="hidden xl:block absolute lg:top-7 lg:left-[28%] lg:w-[80px] lg:h-[80px]">
@@ -39,10 +38,10 @@ function Skills() {
             alt="Star"
             className="hidden xl:block absolute top-28 -right-4"
           />
-          <div className="w-24 h-24 -bottom-20 right-7 md:w-24 md:h-24 md:bottom-0 md:right-0 block absolute lg:w-[88px] lg:h-[88px] lg:bottom-40 lg:left-2 xl:w-[150px] xl:h-[150px] xl:bottom-20 xl:left-12">
+          <div className="w-24 h-24 -bottom-16 right-12 md:w-20 md:h-20 md:-bottom-6 md:right-9 block absolute lg:w-[100px] lg:h-[100px] lg:top-52 lg:left-3 xl:w-[170px] xl:h-[170px] xl:top-52 xl:left-12">
             <Image src={laptop} alt="Laptop" fill />
           </div>
-          <div className="w-14 h-14 -bottom-8 -right-2 md:w-20 md:h-20 md:bottom-8 md:-right-16 block absolute lg:w-[80px] lg:h-[80px] lg:top-[160px] lg:left-20 xl:w-[100px] xl:h-[100px] xl:top-40 xl:left-40">
+          <div className="w-14 h-14 -bottom-2 right-3 md:w-16 md:h-16 md:bottom-2 md:-right-3 block absolute lg:w-[80px] lg:h-[80px] lg:top-[160px] lg:left-20 xl:w-[100px] xl:h-[100px] xl:top-40 xl:left-40">
             <Image src={coding} alt="Coding" fill />
           </div>
         </div>

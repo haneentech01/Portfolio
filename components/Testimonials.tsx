@@ -1,8 +1,8 @@
 "use client";
 
-import speech from "../public/testimonials/speech.svg";
+import speech from "../assets/testimonials/speech.svg";
 import Image from "next/image";
-import yay from "../public/testimonials/yay.svg";
+import yay from "../assets/testimonials/yay.svg";
 import { testimonials } from "@/data/Skills";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -18,9 +18,9 @@ const Testimonials = () => {
         </h2>
 
         {/* Line Break  */}
-        <div className="absolute w-[44%] md:w-[72%] lg:w-[76%]  xl:w-[71%] h-2 rounded bg-primaryYallow top-4 right-0 xl:top-6"></div>
+        <div className="absolute w-[42%] md:w-[72%] lg:w-[76%] xl:w-[71%] h-2 rounded bg-primaryYallow top-4 right-0 xl:top-6"></div>
 
-        <div className="absolute left-48 -top-9 xl:left-[280px] transform transition-all -rotate-12 w-10 h-10 xl:w-[50px] xl:h-[50px] pr-5">
+        <div className="absolute left-[11.7rem] -top-9 xl:left-[285px] transform transition-all -rotate-12 w-10 h-10 xl:w-[50px] xl:h-[50px] pr-5">
           <Image src={speech} alt="Speech Image" fill />
         </div>
       </div>
@@ -42,7 +42,7 @@ const Testimonials = () => {
           ))}
 
           <div className="absolute -bottom-11 right-0 xl:-right-10 transform transition-all -rotate-12">
-            <Image src={yay} alt="Speech Image" width={50} height={50} />
+            <Image src={yay} alt="Yay Image" width={50} height={50} />
           </div>
         </div>
       </motion.div>
