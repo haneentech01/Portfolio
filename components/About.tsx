@@ -6,7 +6,7 @@ import astronaut from "../assets/about/astronaut.png";
 
 const About = () => {
   return (
-    <section className="bg-primaryBlue relative flex">
+    <section className="bg-primaryBlue relative flex" id="about">
       <div className="-mt-36 md:-mt-[9.4rem] lg:mt-10 xl:mt-16 mx-5 md:mx-7 lg:mx-12 xl:mx-32 text-white">
         <h1 className="text-4xl md:text-5xl leading-[6rem] md:leading-[7rem] relative ml-10 md:ml-14 font-oswald ">
           About
