@@ -13,7 +13,7 @@ const Projects = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section className="bg-primaryBlue relative flex flex-col" id="projects">
+    <section className="bg-primaryBlue relative flex flex-col" id="portfolio">
       {/* Main Content */}
       <div className="mt-9 lg:mt-16 mx-6 xl:mx-28 relative">
         {/* Title Section */}
