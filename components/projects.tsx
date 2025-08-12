@@ -8,7 +8,6 @@ import { projects } from "@/data/Skills";
 import projectIcon from "../assets/projects/projectIcon.svg";
 import github from "../assets/projects/GitHub.png";
 import external from "../assets/projects/external.svg";
-import code from "../assets/skills/coding.svg";
 
 const Projects = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
