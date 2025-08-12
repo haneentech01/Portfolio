@@ -145,15 +145,16 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     description:
       "A modern, responsive portfolio website showcasing projects and skills. Features smooth animations, contact forms, and optimized performance with excellent lighthouse scores.",
-    image: "/portfolio.jpg",
+    image: "/portfolio.png",
     technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
     githubUrl: "https://github.com/haneentech01/Portfolio",
+    demoUrl: "https://portfolio-flame-kappa-glnzlrdde5.vercel.app/",
   },
   {
     title: "Special Design",
     description:
       "This is a static website designed to showcase profile information, skills, photo gallery, timeline, benefits, and testimonials. It uses a simple and elegant design suitable for professionally showcasing projects or services.",
-    image: "/specialDesign.jpg",
+    image: "/specialDesign.png",
     technologies: ["HTML5", "CSS3", "JavaScript"],
     githubUrl: "https://github.com/haneentech01/SpecialDesign-master",
     demoUrl: "https://haneentech01.github.io/SpecialDesign-master/",
