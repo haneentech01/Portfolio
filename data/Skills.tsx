@@ -3,10 +3,20 @@ type Skill = {
   icon: string;
   style?: object;
 };
+
 type Testimonial = {
   quote: string;
   name?: string;
   job?: string;
+};
+
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  githubUrl: string;
+  demoUrl?: string;
 };
 
 export const skills: Skill[] = [
@@ -111,5 +121,41 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "I have an actual passion for continued learning, always looking for ways to improve my skills and become familiar with the latest web world evolution and trends. When faced with a new technology or challenge that I have not worked with before, I attack it with the mindset of a passionate researcher to be able to learn the skill, perform, and enhance every project I work on.",
+  },
+];
+
+export const projects: Project[] = [
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-featured e-commerce platform with shopping cart, user authentication, payment integration, and admin dashboard. Built with modern React patterns and optimized for performance.",
+    image: "/ecommerce.jpg",
+    technologies: ["React", "JavaScript", "Bootstrap", "Redux", "Stripe API"],
+    githubUrl: "https://github.com/haneentech01/e-commerce-project",
+  },
+  {
+    title: "Movie App",
+    description:
+      " I Developed a movie discovery app with, featuring trending movies, search, and detailed pages.  Integrated a mock API for real-time data fetching, enabling smooth navigation and filtering.",
+    image: "/movie.png",
+    technologies: ["React", "JavaScript", "Bootstrap", "Redux", "mock API"],
+    githubUrl: "https://github.com/haneentech01/reactjs-movies-redux",
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A modern, responsive portfolio website showcasing projects and skills. Features smooth animations, contact forms, and optimized performance with excellent lighthouse scores.",
+    image: "/portfolio.jpg",
+    technologies: ["Next.js", "TypeScript", "Framer Motion", "Tailwind CSS"],
+    githubUrl: "https://github.com/haneentech01/Portfolio",
+  },
+  {
+    title: "Special Design",
+    description:
+      "This is a static website designed to showcase profile information, skills, photo gallery, timeline, benefits, and testimonials. It uses a simple and elegant design suitable for professionally showcasing projects or services.",
+    image: "/specialDesign.jpg",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    githubUrl: "https://github.com/haneentech01/SpecialDesign-master",
+    demoUrl: "https://haneentech01.github.io/SpecialDesign-master/",
   },
 ];
