@@ -5,7 +5,7 @@ It features a clean, responsive design optimized for performance and accessibili
 
 ---
 
-![Portfolio Preview]![Uploading image.png…]()
+![Portfolio Preview](./public/portfolio.png)
 
 
 ---
@@ -38,12 +38,12 @@ It features a clean, responsive design optimized for performance and accessibili
 *    common/
 *    layout/
 *    sections/
--      Hero.tsx
--      About.tsx
--      Skills.tsx
--      Project.tsx
--      Testimonials.tsx
--      Contact.tsx      
+--      Hero.tsx
+--      About.tsx
+--      Skills.tsx
+--      Project.tsx
+--      Testimonials.tsx
+--      Contact.tsx      
 *  lib/
 *    supabaseAdmin.ts
  *   supabaseClient.ts   
