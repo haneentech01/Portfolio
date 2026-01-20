@@ -33,16 +33,21 @@ It features a clean, responsive design optimized for performance and accessibili
 ## 📁 Project Structure
 
 src/
-├── components/
-│   ├── common/
-│   ├── layout/
-│   └── sections/
-│        ├── Hero.tsx
-│        ├── About.tsx
-│        └── Skills.tsx
-├── lib/
-│   └── supabaseClient.ts
-└── app/
+  components/
+    common/
+    layout/
+    sections/
+      Hero.tsx
+      About.tsx
+      Skills.tsx
+      Project.tsx
+      Testimonials.tsx
+      Contact.tsx
+  lib/
+    supabaseAdmin.ts
+    supabaseClient.ts
+  app/
+  hook/
 
 ---
 
