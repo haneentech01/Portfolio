@@ -7,7 +7,7 @@ It features a clean, responsive design optimized for performance and accessibili
 
 ![Portfolio Preview](./portfolio.png)
 
---
+---
 
 ## ✨ Features
 
