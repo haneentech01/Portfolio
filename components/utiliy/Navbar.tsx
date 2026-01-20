@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [open, toggleLinks] = useToggleLinks();
@@ -44,7 +45,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-primaryBlue text-white shadow-lg px-3 lg:px-10 py-2 flex flex-col lg:flex-row lg:items-center lg:justify-between relative">
+    <nav className="bg-primaryBlue text-white shadow-lg z-50 px-3 lg:px-10 py-2 flex flex-col lg:flex-row lg:items-center lg:justify-between relative">
       {/* Logo and Title */}
       <div className="flex items-center justify-between">
         <div className="flex items-center group">
@@ -70,31 +71,42 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <div className="hidden lg:flex space-x-6 mt-4 lg:mt-0 font-oswald">
         {menuItems.map((item, index) => (
-          <Link
-            href={item.link}
+          <ScrollLink
+            to={item.link.replace("/#", "")} // remove /# to match section id
             key={index}
-            className="group flex items-center gap-2 transition-all duration-200 hover:text-primaryYallow hover:border-b-2 hover:border-primaryYallow hover:translate-y-2 hover:pb-2"
+            smooth={true}   
+            duration={200}  
+            spy={true}    
+            offset={-70}    
+            className="group flex items-center gap-2 transition-all duration-200 hover:text-primaryYallow hover:border-b-2 hover:border-primaryYallow hover:translate-y-2 hover:pb-2 cursor-pointer"
+            onClick={toggleLinks}
           >
             {item.icon}
             {item.name}
-          </Link>
+          </ScrollLink>
         ))}
+
       </div>
 
       {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden flex flex-col space-y-5 font-oswald py-3 items-center text-xl ">
           {menuItems.map((item, index) => (
-            <Link
-              href={item.link}
+            <ScrollLink
+              to={item.link.replace("/#", "")} // remove /# to match section id
               key={index}
-              className="group flex items-center gap-5 transition-all duration-200 hover:text-primaryYallow hover:translate-x-2"
-              onClick={toggleLinks}
+              smooth={true}   // scroll سلس
+              duration={500}  // مدة الانيميشن بالميلي ثانية
+              spy={true}      // highlight عندما يكون القسم ظاهر
+              offset={-70}    // لو عندك navbar ثابت
+              className="group flex items-center gap-2 transition-all duration-200 hover:text-primaryYallow hover:border-b-2 hover:border-primaryYallow hover:translate-y-2 hover:pb-2 cursor-pointer"
+              onClick={toggleLinks} // للموبايل
             >
               {item.icon}
               {item.name}
-            </Link>
+            </ScrollLink>
           ))}
+
         </div>
       )}
     </nav>

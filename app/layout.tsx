@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
+import AOSProvider from "../components/providers/AOSProvider";
 
 const inter = Inter({
   variable: "--font-inter-sans",
@@ -19,13 +20,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${oswald.variable} `}>
-        {children}
+      <body className={`${inter.variable} ${oswald.variable}`}>
+         <AOSProvider>{children}</AOSProvider>
       </body>
     </html>
   );

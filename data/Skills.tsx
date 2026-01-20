@@ -1,16 +1,18 @@
-type Skill = {
+export type Skill = {
+  id: number;
   title: string;
-  icon: string;
-  style?: object;
+  icon_url: string | null;
+  sort_order: number | null;
 };
 
-type Testimonial = {
+export type Testimonial = {
+  id: number;
   quote: string;
   name?: string;
   job?: string;
 };
 
-type Project = {
+export type Project = {
   title: string;
   description: string;
   image: string;
@@ -21,106 +23,146 @@ type Project = {
 
 export const skills: Skill[] = [
   {
+    id: 1,
     title: "HTML",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    sort_order: 1,
   },
   {
+    id: 2,
     title: "CSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    sort_order: 2,
   },
   {
+    id: 3,
     title: "Javascript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    sort_order: 3,
   },
   {
+    id: 4,
     title: "TailwindCSS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    sort_order: 4,
   },
   {
+    id: 5,
     title: "React",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    sort_order: 5,
   },
   {
+    id: 6,
     title: "NextJS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
-    style: { filter: "invert(1)" },
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original-wordmark.svg",
+    sort_order: 6,
   },
   {
+    id: 7,
     title: "Typescript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    sort_order: 7,
   },
   {
+    id: 8,
     title: "Git",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    sort_order: 8,
   },
   {
+    id: 9,
     title: "GitHub",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/github/github-original.svg",
-    style: { filter: "invert(1)" },
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/github/github-original.svg",
+    sort_order: 9,
   },
   {
+    id: 10,
     title: "Figma",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    sort_order: 10,
   },
   {
+    id: 11,
     title: "Redux",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    sort_order: 11,
   },
   {
+    id: 12,
     title: "Material UI",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+    sort_order: 12,
   },
   {
+    id: 13,
     title: "Bootstrap",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/bootstrap/bootstrap-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/bootstrap/bootstrap-original.svg",
+    sort_order: 13,
   },
   {
+    id: 14,
     title: "axios",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/axios/axios-plain-wordmark.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/axios/axios-plain-wordmark.svg",
+    sort_order: 14,
   },
   {
+    id: 15,
     title: "AntDesign",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/antdesign/antdesign-plain.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/antdesign/antdesign-plain.svg",
+    sort_order: 15,
   },
   {
+    id: 16,
     title: "Reactrouter",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/reactrouter/reactrouter-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/reactrouter/reactrouter-original.svg",
+  sort_order: 16,
   },
   {
+    id: 17,
     title: "Canva",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/canva/canva-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/canva/canva-original.svg",
+  sort_order: 17,
   },
   {
+    id: 18,
     title: "Jira",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/jira/jira-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/jira/jira-original.svg",
+  sort_order: 18,
   },
   {
+    id: 19,
     title: "Flutter",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/flutter/flutter-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/flutter/flutter-original.svg",
+  sort_order: 19,
   },
   {
+    id: 20,
     title: "MongoDB",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/mongodb/mongodb-original.svg",
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/mongodb/mongodb-original.svg",
+  sort_order: 20,
   },
   {
+    id: 21,
     title: "Json",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/json/json-original.svg",
-    style: { filter: "invert(1)" },
+    icon_url: "https://cdn.jsdelivr.net/gh/devicons/devicon@master/icons/json/json-original.svg",
+    sort_order: 21,
   },
 ];
 
 export const testimonials: Testimonial[] = [
   {
-    quote:
-      "Every successful project starts by understanding the project's goals and requirements to be successful. Whether you are a startup, anonline store, a school, a freelancer, a law firm, or a clinic, I willdo my best to know your project in its entirety and provide you withtailored digital products and services with speed, performance, and agreat user experiences. I use modern technologies, such as React andNext.js, to achieve professional responsive interfaces that functionwell from any device.",
+    quote: "I build with purpose, not just code.I start every project by understanding your goals and users, then translate them into fast, responsive, and scalable web solutions using modern technologies like React and Next.js.",
+    id: 1
+  },
+  {
+    quote: "Clear communication. Clean code. Reliable delivery.I respect the trust my clients place in me and focus on delivering high-quality work, on time, with long-term maintainability in mind.",
+    id: 2
   },
   {
     quote:
-      "I respect the trust each client places in me. For this reason, I work hard to provide a seamless working experience with clear and professional communication as the foundation for the agreement. Clients receive the work they need, when they need it, with the expectations of quality, clean code, and attention to detail. I approach every project with a long-term view of working together, not just as a project itself.",
-  },
-  {
-    quote:
-      "I have an actual passion for continued learning, always looking for ways to improve my skills and become familiar with the latest web world evolution and trends. When faced with a new technology or challenge that I have not worked with before, I attack it with the mindset of a passionate researcher to be able to learn the skill, perform, and enhance every project I work on.",
+      "Always learning, always improving.I actively stay up to date with modern front-end trends and technologies, approaching new challenges with a problem-solving and research-driven mindset.",
+    id: 3
   },
 ];
 
