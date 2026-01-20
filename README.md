@@ -5,7 +5,7 @@ It features a clean, responsive design optimized for performance and accessibili
 
 ---
 
-![Portfolio Preview](./portfolio.png)
+![Portfolio Preview](/portfolio.png)
 
 ---
 
@@ -36,11 +36,10 @@ src/
 ├── components/
 │   ├── common/
 │   ├── layout/
-│   └── ui/
-├── sections/
-│   ├── Hero.tsx
-│   ├── About.tsx
-│   └── Skills.tsx
+│   └── sections/
+│        ├── Hero.tsx
+│        ├── About.tsx
+│        └── Skills.tsx
 ├── lib/
 │   └── supabaseClient.ts
 └── app/
